@@ -1,7 +1,19 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-export default class SampleComponent extends React.Component {
+interface Props {
+  onInitialVal: () => void;
+}
+
+export default class SampleComponent extends React.Component<Props> {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount(){
+    this.props.onInitialVal();
+  }
 
   onHello() {
       console.log('dragon');
@@ -12,12 +24,12 @@ export default class SampleComponent extends React.Component {
       <div className="shopping-list">
         <h1>Shopping List for </h1>
           <a href="#" onClick={this.onHello.bind(this)}>were</a>
-          <Link to={"/about"}>about</Link>
+          king ace qwwq
         <ul>
           <li>Instagram werer sfsfa</li>
           <li>WhatsApp</li>
-          <li>Oculus</li>
         </ul>
+        <Link to="/about">with hasht</Link>
       </div>
     );
   }

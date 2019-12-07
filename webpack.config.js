@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'none',
@@ -20,8 +21,11 @@ module.exports = {
   },
   output: {
       filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build/dist'),
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   resolve: {
     modules: [
       path.join(__dirname),
