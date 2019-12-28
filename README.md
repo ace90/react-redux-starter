@@ -2,4 +2,4 @@
 
 `npm install`
 
-jenkins test 1 2
+jenkins test 1 2 3
