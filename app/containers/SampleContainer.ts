@@ -4,17 +4,15 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import SampleComponent from "../components/SampleComponent";
 
-const mapStateToProps = (state) => {
-    console.log('some', getTodoList(state));
+const mapStateToProps = (state) => {    
     return {
-
+        todos:  getTodoList(state)
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onInitialVal: () => {
-            console.log('hello');
+        onInitialVal: () => {        
             const param = [
                 {
                     id: 1,

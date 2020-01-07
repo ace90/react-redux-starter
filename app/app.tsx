@@ -10,15 +10,11 @@ import { AppContainer } from 'react-hot-loader'
 import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router';
 import todoReducer from './reducers/todoreducers';
 
-const onSamplePage = () => {
-
-};
-
 const routes = (
     <div>      
       <Switch>
-        <Route exact path="/" component={SampleContainer} onEnter={onSamplePage} />
-        <Route exact path="/about" component={AboutContainer} />
+        <Route exact path="/" component={SampleContainer} />
+        <Route path="/about" component={AboutContainer} />
       </Switch>
     </div>
   )
